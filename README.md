@@ -64,7 +64,7 @@ cd java && ./mvnw test
 ### 1 预设变量
 
 ```bash
-export BASE=http://localhost:8080/api/ot/v1
+export BASE=http://localhost:8080/api/v1/online-test
 export CONTROLLER=http://localhost:8081
 TEACHER_ID=91001
 STUDENT_ID=91002
@@ -72,7 +72,7 @@ COURSE_ID=81001
 ```
 
 ```fish
-export BASE=http://localhost:8080/api/ot/v1
+export BASE=http://localhost:8080/api/v1/online-test
 export CONTROLLER=http://localhost:8081
 set TEACHER_ID91001
 set STUDENT_ID 91002

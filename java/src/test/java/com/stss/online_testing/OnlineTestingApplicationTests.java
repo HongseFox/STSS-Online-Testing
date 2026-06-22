@@ -134,7 +134,7 @@ class OnlineTestingApplicationTests {
 
         try {
             mockMvc.perform(
-                            post("/api/ot/v1/actions")
+                            post("/api/v1/online-test/actions")
                                     .contentType(MediaType.APPLICATION_JSON)
                                     .content(objectMapper.writeValueAsString(request)))
                     .andExpect(status().isOk())
@@ -199,7 +199,7 @@ class OnlineTestingApplicationTests {
                         outputStream.toByteArray());
 
         mockMvc.perform(
-                        multipart("/api/ot/v1/actions/question-bank/import")
+                        multipart("/api/v1/online-test/actions/question-bank/import")
                                 .file(file)
                                 .param("teacherId", String.valueOf(TEST_TEACHER_ID)))
                 .andExpect(status().isOk())
@@ -701,7 +701,7 @@ class OnlineTestingApplicationTests {
     private Result<Object> dispatchViaHttp(ApiActionProtocol.Request request) throws Exception {
         byte[] responseBody =
                 mockMvc.perform(
-                                post("/api/ot/v1/actions")
+                                post("/api/v1/online-test/actions")
                                         .contentType(MediaType.APPLICATION_JSON)
                                         .content(objectMapper.writeValueAsString(request)))
                         .andExpect(status().isOk())

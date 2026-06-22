@@ -72,7 +72,7 @@ Go Proctor 在学生主动交卷或考试超时强制交卷后，调用 Java 的
 ### 请求
 
 ```
-POST /api/ot/v1/actions
+POST /api/v1/online-test/actions
 ```
 
 ```json

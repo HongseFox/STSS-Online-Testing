@@ -19,7 +19,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(@NonNull InterceptorRegistry registry) {
         registry.addInterceptor(requestTraceInterceptor)
-                .addPathPatterns("/api/ot/v1/**")
+                .addPathPatterns("/api/v1/online-test/**")
                 .order(0);
     }
 }

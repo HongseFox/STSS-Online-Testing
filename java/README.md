@@ -61,7 +61,7 @@ cd java && ./mvnw test
 ### 5.1 预设变量
 
 ```bash
-export BASE=http://localhost:8080/api/ot/v1
+export BASE=http://localhost:8080/api/v1/online-test
 export CONTROLLER=http://localhost:8081
 TEACHER_ID=91001
 STUDENT_ID=91002
@@ -69,7 +69,7 @@ COURSE_ID=81001
 ```
 
 ```fish
-export BASE=http://localhost:8080/api/ot/v1
+export BASE=http://localhost:8080/api/v1/online-test
 export CONTROLLER=http://localhost:8081
 set TEACHER_ID91001
 set STUDENT_ID 91002
@@ -209,7 +209,7 @@ docker compose down -v
 ## 1. 预设变量
 
 ```bash
-export BASE=http://localhost:8080/api/ot/v1
+export BASE=http://localhost:8080/api/v1/online-test
 TEACHER_ID=9001
 STUDENT_ID=9002
 COURSE_ID=101
@@ -810,9 +810,9 @@ curl -X POST "$BASE/actions" \
 
 日志由后端自动记录，不需要额外调用日志接口。当前统一入口相关操作在执行成功或失败后都会自动写日志，包括：
 
-- `POST /api/ot/v1/actions`
-- `POST /api/ot/v1/actions/question-bank/import`
-- `POST /api/ot/v1/actions/exams/export`
+- `POST /api/v1/online-test/actions`
+- `POST /api/v1/online-test/actions/question-bank/import`
+- `POST /api/v1/online-test/actions/exams/export`
 
 ### 7.2 日志配置
 
@@ -839,7 +839,7 @@ logger:
 先启动 Java 后端，然后发一条最小请求：
 
 ```bash
-curl -X POST "http://localhost:8080/api/ot/v1/actions" \
+curl -X POST "http://localhost:8080/api/v1/online-test/actions" \
   -H "Content-Type: application/json" \
   -d '{
     "action":"unknown_action",
